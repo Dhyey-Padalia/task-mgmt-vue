@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import LoginPage from "../components/LoginPage.vue"; // LoginPage component
 import HomePage from "../components/HomePage.vue"; // Main/Home page (you'll create this later)
+import NavBar from "../components/NavBar.vue";
 
 const routes = [
   // {
