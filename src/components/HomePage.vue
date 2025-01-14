@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto p-4">
-    <!-- Add Task Form -->
+    <!-- Add Task -->
     <div class="mb-6">
       <h2 class="text-2xl font-bold text-center mb-4">Task Management</h2>
-      <div class="flex gap-4">
+      <div class="flex gap-10">
         <input 
           v-model="newTask.name" 
           type="text" 
@@ -25,8 +25,7 @@
         </select>
         <button 
           @click="addTask" 
-          class="bg-blue-500 text-white px-4 py-2 rounded-md"
-        >
+          class="bg-blue-500 text-white px-4 py-2 rounded-md">
           Add Task
         </button>
       </div>
@@ -86,7 +85,7 @@ export default {
     };
   },
   methods: {
-    // Method to add a new task to the table
+    // Add new task
     addTask() {
       if (this.newTask.name && this.newTask.dueDate) {
         this.tasks.push({ ...this.newTask });
@@ -98,12 +97,12 @@ export default {
       }
     },
 
-    // Method to delete a task
+    // Delete task
     deleteTask(index) {
       this.tasks.splice(index, 1);
     },
 
-    // Method to edit a task (opens input fields with existing data)
+    // Edit task
     editTask(index) {
       const task = this.tasks[index];
       this.newTask.name = task.name;
