@@ -100,51 +100,20 @@
             </svg>
           </button>
         </div>
-
-        <!-- <div class="relative my-6 inline-flex w-fit">
-          <div
-            class="absolute bottom-auto left-auto right-0 top-0 z-10 inline-block -translate-y-1/2 translate-x-2/4 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 whitespace-nowrap rounded-full bg-primary-100 px-2.5 py-1 text-center align-baseline text-xs font-bold leading-none text-primary-700 dark:bg-slate-900 dark:text-primary-500"
-          >
-            writing…
-          </div>
-          <div class="h-24 w-24">
-            <img
-              src="../../public/General_Electric.png"
-              class="h-full w-full max-w-full rounded-lg object-cover"
-            />
-          </div>
-        </div> -->
-
         <div
           class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
         >
-          <!-- <button
-            type="button"
-            class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-            id="user-menu-button"
-            aria-expanded="false"
-            data-dropdown-toggle="user-dropdown"
-            data-dropdown-placement="bottom"
-          >
-            <span class="sr-only">Open user menu</span>
-            <img
-              class="w-8 h-8 rounded-full"
-              src="../../public/General_Electric.png"
-              alt="user photo"
-            />
-          </button>
-        </div> -->
-
           <div class="flex gap-4">
             <div class="relative inline-flex">
-              <button>
+              <button @click="$emit('urgent-task', 'dueDate')"> 
               <img
                 src="/General_Electric.png"
                 alt="avatar"
                 class="inline-block relative object-cover object-center rounded-full w-8 h-8"
+                
               /><span
                 class="absolute min-w-[2px] min-h-[2px] rounded-full py-1 px-1 text-xs font-medium content-[''] leading-none grid place-items-center top-[5%] right-[5%] translate-x-2/4 -translate-y-2/4 bg-green-600 text-white border border-white"
-              >1</span>
+              >{{ urgentTaskCount }}</span>
               </button>
             </div>
           </div>
@@ -208,14 +177,14 @@
                 >Completed</a
               >
             </li>
-            <li>
+            <!-- <li>
               <a
                 href="#"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 @click="$emit('urgent-task', 'dueDate')"
                 >Urgent</a
               >
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -226,6 +195,12 @@
 <script>
 export default {
   name: "NavBar",
+  props: {
+    urgentTaskCount: {
+      type: Number,
+      required: true,
+    },
+  },
   data() {
     return {
       searchQuery: "",
