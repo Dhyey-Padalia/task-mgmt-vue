@@ -79,8 +79,9 @@ export default {
         status: 'Pending'
       },
       tasks: [
-        { name: 'Sample Task 1', dueDate: '2025-01-15', status: 'Pending' },
+        { name: 'Sample Task 1', dueDate: '2025-01-12', status: 'Completed' },
         { name: 'Sample Task 2', dueDate: '2025-01-16', status: 'In Progress' },
+        { name: 'Sample Task 3', dueDate: '2025-01-30', status: 'Pending'},
       ],
     };
   },
