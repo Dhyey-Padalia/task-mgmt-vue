@@ -1,12 +1,12 @@
 <template>
-  <div class="container items-center justify-between mx-auto p-1">
+  <div class="container items-center justify-between w-auto mx-auto p-6 px-2">
     <NavBar
       @filter-tasks="filterByStatus"
       @search-tasks="searchTasks"
       @urgent-task="filterurgenttask"
       :urgentTaskCount="urgentTaskCount"
     />
-    <div class="mb-6 pt-8 px-8 text-center">
+    <div class="mb-10 pt-8 px-8 text-center justify-items-center ">
       <a onclick="window.location.reload();"
         ><h2 class="text-3xl font-bold text-center mb-4">
           Task Management Application
@@ -17,7 +17,7 @@
           v-model="newTask.name"
           type="text"
           placeholder="Task Name"
-          class="px-4 py-2 border border-gray-300 rounded-md"
+          class="px-4 py-2 border border-gray-300 rounded-md justify-center"
         />
         <input
           v-model="newTask.dueDate"
@@ -26,7 +26,7 @@
         />
         <select
           v-model="newTask.status"
-          class="px-4 py-2 border border-gray-300 rounded-md"
+          class="px-4 py-2 border border-gray-300 rounded-md object-right"
         >
           <option value="Pending">Pending</option>
           <option value="In Progress">In Progress</option>
@@ -41,9 +41,9 @@
         </button>
       </div>
     </div>
-    <div class="flex px-8 flex-wrap">
+    <div class="flex flex-wrap ">
       <table
-        class="min-w-full table-auto border-collapse flex-wrp justify-center text-center"
+        class="min-w-full table-auto border-collapse flex-wrp justify-center text-center "
       >
         <thead>
           <tr class="bg-gray-200">
@@ -58,7 +58,7 @@
             <td class="px-6 py-4 border-b">{{ task.name }}</td>
             <td class="px-6 py-4 border-b">{{ task.dueDate }}</td>
             <td class="px-6 py-4 border-b">{{ task.status }}</td>
-            <td class="px-6 py-4 border-b">
+            <td class="px-6 py-4 border-b flex flex-wra gap-2 justify-center place-items-center">
               <button
                 @click="editTask(index)"
                 class="bg-yellow-500 text-white px-4 py-2 rounded-md mr-6"
@@ -67,7 +67,7 @@
               </button>
               <button
                 @click="deleteTask(index)"
-                class="bg-red-500 text-white px-4 py-2 rounded-md"
+                class="bg-blue-500 text-white px-4 py-2 rounded-md"
               >
                 Delete
               </button>
