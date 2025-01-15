@@ -2,10 +2,10 @@
   <div class="navbar">
     <nav
       class="bg-white border-gray-200 dark:bg-gray-900"
-      style="box-shadow: 1em; border-radius: 1em"
+      style="box-shadow: 5em; border-radius: 1em"
     >
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1"
+        class="min-w-full flex items-center justify-around  p-2.5"
       >
         <a
           href="https://steepgraph.com/"
@@ -26,7 +26,7 @@
             data-collapse-toggle="navbar-search"
             aria-controls="navbar-search"
             aria-expanded="false"
-            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
+            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 px-2 me-1"
           >
             <svg
               class="w-5 h-5"
@@ -111,11 +111,12 @@
                 alt="avatar"
                 class="inline-block relative object-cover object-center rounded-full w-8 h-8"
                 
-              /><span
-                class="absolute min-w-[2px] min-h-[2px] rounded-full py-1 px-1 text-xs font-medium content-[''] leading-none grid place-items-center top-[5%] right-[5%] translate-x-2/4 -translate-y-2/4 bg-green-600 text-white border border-white"
+              />
+              <span
+                class="animate-pulse opacity-100 absolute bg-sky-400 min-w-[1px] min-h-[1px] rounded-full py-0.3 px-1 text-xs font-medium content-[''] leading-none grid place-items-center top-[1%] right-[1%] translate-x-1/4 -translate-y-1/4  bg-green-600 text-white border border-white"
               >{{ urgentTaskCount }}</span>
               </button>
-            </div>
+            </div> 
           </div>
         </div>
         <div
